@@ -1,10 +1,11 @@
 :root {
   // colors
   --black: #212121;
-  --dark-grey: #363636;
+  --dark-grey: #2d2d2d;
   --medium-grey: rgb(217, 217, 217);
   --white: rgb(255, 255, 255);
-  --main-color: rgb(78, 225, 160);
+  // --main-color: rgb(78, 225, 160);
+  --main-color: #635fc7;
   --red: #ff6f5b;
 
   // typo
@@ -62,7 +63,6 @@ h1 {
   font-weight: var(--bold);
   line-height: 1;
   letter-spacing: -2.5px;
-  // text-align: center;
 }
 
 h2 {
@@ -96,7 +96,6 @@ p {
 @media screen and (max-width: #{$mobile-breakpoint}) {
   h1 {
     text-align: center;
-    // padding-right: 0;
   }
   h2 {
     text-align: center;
@@ -155,6 +154,16 @@ p {
   .pageWrapper {
     width: calc(100% - 3.125em);
   }
+}
+
+.icon {
+  fill: white;
+  transition: fill 0.3s ease-in-out;
+}
+
+.icon:hover {
+  cursor: pointer;
+  fill: var(--main-color);
 }
 
 // Navigation
@@ -346,8 +355,6 @@ nav {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(324px, 1fr));
   grid-gap: 25px;
-  // margin-top: 100px;
-  // margin-bottom: 100px;
 }
 
 .projectsHeaderContainer {
@@ -356,12 +363,6 @@ nav {
   align-items: center;
   justify-content: space-between;
 }
-
-// .projectGrid {
-//   display: grid;
-//   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-//   max-width: 1200px;
-// }
 
 .projectImageContainer {
   position: relative;
