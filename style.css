@@ -54,6 +54,11 @@ h2 {
   font-size: clamp(2rem, 5vw, 3rem);
   font-weight: var(--bold);
   letter-spacing: -1.5px;
+  transition: color 0.3s;
+}
+
+h2:hover {
+  color: var(--main-color);
 }
 
 h3 {
@@ -67,6 +72,17 @@ p {
   line-height: var(--line-height);
   font-weight: var(--medium);
   max-width: 50ch;
+}
+
+a {
+  text-decoration: none;
+  color: #ffffff;
+  transition: all 0.3 ease-in-out;
+}
+
+a:hover {
+  cursor: pointer;
+  color: var(--main-color);
 }
 
 .line {
