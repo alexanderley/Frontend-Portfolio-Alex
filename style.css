@@ -433,6 +433,7 @@ footer {
 .contact .contactGrid .contactForm input {
   box-sizing: border-box;
   font-size: var(--font-size-standart);
+  font-family: var(--font-family);
   position: relative;
   color: white;
   background: none;
@@ -443,13 +444,13 @@ footer {
   width: 100%;
 }
 .contact .contactGrid .contactForm input::-moz-placeholder {
-  text-transform: uppercase;
-  font-size: var(--font-size-standart);
+  font-size: 14px;
+  font-family: var(--font-family);
   color: var(--medium-grey);
 }
 .contact .contactGrid .contactForm input::placeholder {
-  text-transform: uppercase;
-  font-size: var(--font-size-standart);
+  font-size: 14px;
+  font-family: var(--font-family);
   color: var(--medium-grey);
 }
 .contact .contactGrid .contactForm input:focus {
@@ -473,14 +474,16 @@ footer {
 .contact .contactGrid .contactForm textarea::-moz-placeholder {
   font-family: var(--font-family);
   font-size: var(--font-size-standart);
-  text-transform: uppercase;
   color: var(--medium-grey);
+  font-size: 14px;
+  font-family: var(--font-family);
 }
 .contact .contactGrid .contactForm textarea::placeholder {
   font-family: var(--font-family);
   font-size: var(--font-size-standart);
-  text-transform: uppercase;
   color: var(--medium-grey);
+  font-size: 14px;
+  font-family: var(--font-family);
 }
 .contact .contactGrid .contactForm textarea:focus {
   outline: none;

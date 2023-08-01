@@ -484,6 +484,7 @@ footer {
       input {
         box-sizing: border-box;
         font-size: var(--font-size-standart);
+        font-family: var(--font-family);
         position: relative;
         color: white;
         background: none;
@@ -495,8 +496,10 @@ footer {
       }
 
       input::placeholder {
-        text-transform: uppercase;
-        font-size: var(--font-size-standart);
+        // text-transform: uppercase;
+        // font-size: var(--font-size-standart);
+        font-size: 14px;
+        font-family: var(--font-family);
         // top: 20px;
         // position: absolute;
         color: var(--medium-grey);
@@ -529,8 +532,10 @@ footer {
       textarea::placeholder {
         font-family: var(--font-family);
         font-size: var(--font-size-standart);
-        text-transform: uppercase;
+        // text-transform: uppercase;
         color: var(--medium-grey);
+        font-size: 14px;
+        font-family: var(--font-family);
       }
       textarea:focus {
         outline: none;
