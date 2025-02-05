@@ -17,6 +17,11 @@ window.onbeforeunload = function () {
 // Register the scroll Plugin
 gsap.registerPlugin(ScrollTrigger);
 
+// Make sure ScrollTrigger is correctly set up and there are no conflicts
+ScrollTrigger.defaults({
+  scroller: window,
+});
+
 // Animates contet of the starter section once the page has been reloaded
 gsap.from(".starter-img", { duration: 2, x: "100%", opacity: 0, delay: 1 });
 
@@ -26,10 +31,12 @@ const timeline = gsap.timeline({ defaults: { duration: 1 }, delay: 1 });
 timeline
   .from(".introHeadline", { y: "200%", opacity: 0, ease: "elastic" })
   .from(".heroImage", { x: "100%", opacity: 0, ease: "elastic" })
-  .from(".heroTextContainer", { x: "-100%", opacity: 0, ease: "elastic" })
-  .from(".circle", { y: "200%", opacity: 0, ease: "elastic" })
-  .from(".rings", { x: "-100%", opacity: 0, ease: "elastic" })
-  .from(".skillTextContainer", { x: "-100%", opacity: 0, ease: "elastic" });
+  .from(".heroTextContainer", { x: "-100%", opacity: 0, ease: "elastic" });
+
+// #Todo The users are causing a Problem!!
+// .from(".circle", { y: "200%", opacity: 0, ease: "elastic" });
+// .from(".rings", { x: "-100%", opacity: 0, ease: "elastic" })
+// .from(".skillTextContainer", { x: "-100%", opacity: 0, ease: "elastic" });
 
 gsap.utils.toArray(".project").forEach((project, index) => {
   gsap.from(project, {
@@ -47,12 +54,11 @@ gsap.utils.toArray(".project").forEach((project, index) => {
   });
 });
 
-// Scroll animtaions
 gsap.utils.toArray(".contactGrid").forEach((skillTextContainer) => {
   gsap.from(skillTextContainer, {
     scrollTrigger: {
       trigger: ".contactGrid", // The section that triggers the animation
-      start: "top bottom", // Start the animation when the top of the skillSection hits the bottom of the viewport
+      start: "top 25%", // Start the animation when the top of the skillSection hits the bottom of the viewport
       toggleActions: "play none none none", // Play the animation when in view
       // markers: true, // Optional: shows markers for debugging
     },
