@@ -1,3 +1,15 @@
+@font-face {
+  font-family: "Space Grotesk";
+  src: url("/fonts/SpaceGrotesk.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Writeline";
+  src: url("/fonts/Writeline.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
 :root {
   --black: #212121;
   --dark-grey: #2d2d2d;
@@ -6,6 +18,7 @@
   --main-color: #635fc7;
   --red: #ff6f5b;
   --font-family: "Space Grotesk", sans-serif;
+  --font-family-Hand: "Writeline", sans-serif;
   --medium: 500;
   --bold: 700;
   --font-size-XL: 5rem;
@@ -197,6 +210,8 @@ nav h3 {
 }
 .introSection .introHeadline {
   padding-right: 200px;
+  font-family: var(--font-family-Hand);
+  font-weight: 100;
 }
 
 .heroImage {

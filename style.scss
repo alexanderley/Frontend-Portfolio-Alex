@@ -23,6 +23,7 @@
 
   // typo
   --font-family: "Space Grotesk", sans-serif;
+  --font-family-Hand: "Writeline", sans-serif;
   --medium: 500;
   --bold: 700;
 
@@ -230,6 +231,8 @@ nav {
   padding-bottom: 250px;
   .introHeadline {
     padding-right: 200px;
+    font-family: var(--font-family-Hand);
+    font-weight: 100;
   }
 }
 
@@ -509,25 +512,15 @@ footer {
       }
 
       input::placeholder {
-        // text-transform: uppercase;
-        // font-size: var(--font-size-standart);
         font-size: 14px;
         font-family: var(--font-family);
-        // top: 20px;
-        // position: absolute;
         color: var(--medium-grey);
-        // padding: 25px;
       }
       input:focus {
         outline: none;
         caret-color: white;
       }
-      // input:valid {
-      //   border-bottom: 2px solid var(--main-color);
-      // }
-      // input:invalid {
-      //   border-bottom: 2px solid var(--red);
-      // }
+
       textarea {
         box-sizing: border-box;
         font-family: var(--font-family);
