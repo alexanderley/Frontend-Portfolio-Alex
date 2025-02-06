@@ -27,6 +27,7 @@ gsap.from(".starter-img", { duration: 2, x: "100%", opacity: 0, delay: 1 });
 
 // Timeline will ensure that the effect get played one after another, setting the default duration will create a durantion wich will apply for all of the elements inside of the timeline
 const timeline = gsap.timeline({ defaults: { duration: 1 }, delay: 1 });
+const timeline2 = gsap.timeline({ defaults: { duration: 1 }, delay: 1 });
 
 timeline
   .from(".introHeadline", { y: "200%", opacity: 0, ease: "elastic" })
@@ -34,9 +35,10 @@ timeline
   .from(".heroTextContainer", { x: "-100%", opacity: 0, ease: "elastic" });
 
 // #Todo The users are causing a Problem!!
-// .from(".circle", { y: "200%", opacity: 0, ease: "elastic" });
-// .from(".rings", { x: "-100%", opacity: 0, ease: "elastic" })
-// .from(".skillTextContainer", { x: "-100%", opacity: 0, ease: "elastic" });
+timeline2
+  .from(".rings", { x: "-100%", opacity: 0, ease: "elastic" })
+  .from(".skillTextContainer", { x: "-100%", opacity: 0, ease: "elastic" })
+  .from(".circle", { opacity: 0, ease: "elastic" });
 
 gsap.utils.toArray(".project").forEach((project, index) => {
   gsap.from(project, {
