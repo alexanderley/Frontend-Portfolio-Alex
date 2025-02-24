@@ -1,12 +1,12 @@
 @font-face {
   font-family: "Space Grotesk";
-  src: url("/fonts/SpaceGrotesk.ttf") format("truetype");
+  src: url("fonts/SpaceGrotesk.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "Writeline";
-  src: url("/fonts/Writeline.ttf") format("truetype");
+  src: url("fonts/Writeline.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
@@ -536,4 +536,4 @@ footer {
     align-items: center;
     width: 100%;
   }
-}/*# sourceMappingURL=style.css.map */
+} /*# sourceMappingURL=style.css.map */
