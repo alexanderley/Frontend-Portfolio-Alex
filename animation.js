@@ -60,9 +60,10 @@ gsap.utils.toArray(".contactGrid").forEach((skillTextContainer) => {
   gsap.from(skillTextContainer, {
     scrollTrigger: {
       trigger: ".contactGrid", // The section that triggers the animation
-      start: "top 25%", // Start the animation when the top of the skillSection hits the bottom of the viewport
+      // start: "top -250px",
+      start: "-400px",
       toggleActions: "play none none none", // Play the animation when in view
-      // markers: true, // Optional: shows markers for debugging
+      markers: true, // Optional: shows markers for debugging
     },
     x: "-100%", // Animation properties for sliding in from the left
     opacity: 0,
