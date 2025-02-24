@@ -63,7 +63,7 @@ gsap.utils.toArray(".contactGrid").forEach((skillTextContainer) => {
       // start: "top -250px",
       start: "-400px",
       toggleActions: "play none none none", // Play the animation when in view
-      markers: true, // Optional: shows markers for debugging
+      // markers: true, // Optional: shows markers for debugging
     },
     x: "-100%", // Animation properties for sliding in from the left
     opacity: 0,
