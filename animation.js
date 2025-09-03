@@ -17,7 +17,6 @@ window.onbeforeunload = function () {
 // Register the scroll Plugin
 gsap.registerPlugin(ScrollTrigger);
 
-// Make sure ScrollTrigger is correctly set up and there are no conflicts
 ScrollTrigger.defaults({
   scroller: window,
 });
@@ -25,7 +24,6 @@ ScrollTrigger.defaults({
 // Animates contet of the starter section once the page has been reloaded
 gsap.from(".starter-img", { duration: 2, x: "100%", opacity: 0, delay: 1 });
 
-// Timeline will ensure that the effect get played one after another, setting the default duration will create a durantion wich will apply for all of the elements inside of the timeline
 const timeline = gsap.timeline({ defaults: { duration: 1 }, delay: 1 });
 const timeline2 = gsap.timeline({ defaults: { duration: 1 }, delay: 1 });
 
@@ -43,16 +41,15 @@ timeline2
 gsap.utils.toArray(".project").forEach((project, index) => {
   gsap.from(project, {
     scrollTrigger: {
-      trigger: project, // Trigger each project individually
-      start: "top bottom", // Start the animation when the top of the project reaches the bottom of the viewport
-      toggleActions: "play none none none", // Play the animation when in view
-      // markers: true, // Optional: shows markers for debugging
+      trigger: project,
+      start: "top bottom",
+      toggleActions: "play none none none",
     },
-    y: "100%", // Slide from below (you can change this to x or other values)
+    y: "100%",
     opacity: 0,
     duration: 1,
-    ease: "expo", // Adjust easing as needed
-    delay: index * 0.2, // Adds a staggered delay for each element (optional)
+    ease: "expo",
+    delay: index * 0.2,
   });
 });
 
